@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "National Rifle Association of India",
+      "address": "51-B, Tughlakabad Institutional Area, Vayusenabad, New Delhi, Delhi 110062",
+      "image": "/rangeimg.png",
+      "rating": 4.8,
+      "status": "Closed",
+      "openingHours": "Opens 10 am Mon",
+      "price": "₹1,500/day",
+      "location": { "lat": 28.5355, "lng": 77.3910 },
+      "description": "One of India's premier shooting ranges offering state-of-the-art facilities for professional and amateur shooters.",
+      "bookingOptions": ["Hourly", "Daily", "Membership"],
+      "features": ["10m Air Rifle", "25m Pistol Range", "50m Rifle Range"]
+    },
+    {
+      "id": 2,
+      "name": "Maharashtra Rifle Association",
+      "address": "Shivaji Park, Dadar, Mumbai, Maharashtra 400028",
+      "image": "/rangeimg.png",
+      "rating": 4.5,
+      "status": "Open",
+      "openingHours": "Opens 8 am Mon",
+      "price": "₹1,200/day",
+      "location": { "lat": 19.0760, "lng": 72.8777 },
+      "description": "A well-equipped shooting range in Mumbai offering training and competitions.",
+      "bookingOptions": ["Daily", "Weekly", "Membership"],
+      "features": ["10m Air Pistol", "50m Rifle Range", "Skeet Shooting"]
+    }
+  ]
+  

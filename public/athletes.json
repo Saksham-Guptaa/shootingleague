@@ -1,0 +1,153 @@
+[
+    {
+      "id": 1,
+      "name": "Manu Bhaker",
+      "gender": "Female",
+      "birthday": "18.02.2002",
+      "age": 23,
+      "residence": "India",
+      "height": "1.68m",
+      "weight": "60kg",
+      "country": "India",
+      "flag": "/flags/india.png",
+      "image": "/images/manu.jpg",
+      "medals": {
+        "Olympic Games": { "gold": 0, "silver": 0, "bronze": 2 },
+        "World Championships": { "gold": 0, "silver": 1, "bronze": 0 },
+        "World Cup": { "gold": 2, "silver": 0, "bronze": 0 },
+        "Asian Championships": { "gold": 2, "silver": 1, "bronze": 1 }
+      },
+      "achievements": [
+        {
+          "rank": 3,
+          "event": "10m Air Pistol Mixed Team",
+          "city": "Paris",
+          "year": 2024,
+          "qualification": "580",
+          "medal_matches": "16"
+        },
+        {
+          "rank": 3,
+          "event": "10m Air Pistol Mixed Team",
+          "city": "Paris",
+          "year": 2024,
+          "qualification": "580",
+          "medal_matches": "16"
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "name": "Rajyavardhan Singh Rathore",
+      "gender": "Male",
+      "birthday": "18.02.2002",
+      "age": 23,
+      "residence": "India",
+      "height": "1.68m",
+      "weight": "60kg",
+      "country": "India",
+      "flag": "/flags/india.png",
+      "image": "/images/Rajyavardhan.jpg",
+      "medals": {
+        "Olympic Games": { "gold": 0, "silver": 0, "bronze": 2 },
+        "World Championships": { "gold": 0, "silver": 1, "bronze": 0 },
+        "World Cup": { "gold": 2, "silver": 0, "bronze": 0 },
+        "Asian Championships": { "gold": 2, "silver": 1, "bronze": 1 }
+      },
+      "achievements": [
+        {
+          "rank": 3,
+          "event": "10m Air Pistol Mixed Team",
+          "city": "Paris",
+          "year": 2024,
+          "qualification": "580",
+          "medal_matches": "16"
+        },
+        {
+          "rank": 3,
+          "event": "10m Air Pistol Mixed Team",
+          "city": "Paris",
+          "year": 2024,
+          "qualification": "580",
+          "medal_matches": "16"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Abhinav Bindra",
+      "gender": "Male",
+      "birthday": "18.02.2002",
+      "age": 23,
+      "residence": "India",
+      "height": "1.68m",
+      "weight": "60kg",
+      "country": "India",
+      "flag": "/flags/india.png",
+      "image": "/images/Abhinav.jpg",
+      "medals": {
+        "Olympic Games": { "gold": 0, "silver": 0, "bronze": 2 },
+        "World Championships": { "gold": 0, "silver": 1, "bronze": 0 },
+        "World Cup": { "gold": 2, "silver": 0, "bronze": 0 },
+        "Asian Championships": { "gold": 2, "silver": 1, "bronze": 1 }
+      },
+      "achievements": [
+        {
+          "rank": 3,
+          "event": "10m Air Pistol Mixed Team",
+          "city": "Paris",
+          "year": 2024,
+          "qualification": "580",
+          "medal_matches": "16"
+        },
+        {
+          "rank": 3,
+          "event": "10m Air Pistol Mixed Team",
+          "city": "Paris",
+          "year": 2024,
+          "qualification": "580",
+          "medal_matches": "16"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Gagan Narang",
+      "gender": "Male",
+      "birthday": "18.02.2002",
+      "age": 23,
+      "residence": "India",
+      "height": "1.68m",
+      "weight": "60kg",
+      "country": "India",
+      "flag": "/flags/india.png",
+      "image": "/images/Gagan.jpg",
+      "medals": {
+        "Olympic Games": { "gold": 0, "silver": 0, "bronze": 2 },
+        "World Championships": { "gold": 0, "silver": 1, "bronze": 0 },
+        "World Cup": { "gold": 2, "silver": 0, "bronze": 0 },
+        "Asian Championships": { "gold": 2, "silver": 1, "bronze": 1 }
+      },
+      "achievements": [
+        {
+          "rank": 3,
+          "event": "10m Air Pistol Mixed Team",
+          "city": "Paris",
+          "year": 2024,
+          "qualification": "580",
+          "medal_matches": "16"
+        },
+        {
+          "rank": 3,
+          "event": "10m Air Pistol Mixed Team",
+          "city": "Paris",
+          "year": 2024,
+          "qualification": "580",
+          "medal_matches": "16"
+        }
+      ]
+    }
+    
+  ]
+  
