@@ -14,13 +14,13 @@ const Navbar = () => {
         <div className="relative bg-yellow-500 px-6 py-2 flex items-center ">
           <div className="absolute right-0 top-0 h-full w-6 bg-blue-900 clip-triangle"></div>
           <span className="text-black font-bold text-lg flex items-center">
-            <span className="mr-2">🎯</span> Global Shooting League
+            <span className="mr-2"><img src="/logo.jpg" className="w-14 h-14" alt="" /></span> Global Shooting League
           </span>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-1 justify-center space-x-6">
-          {["Home", "About", "News", "Competitions", "Athletes", "Ranges", "More"].map(
+          {["Home", "About", "News", "Competitions", "Shooters", "Ranges", "More"].map(
             (item, index) => (
               <Link
                 key={index}
@@ -51,7 +51,7 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="md:hidden bg-blue-800 text-center">
-          {["Home", "About", "News", "Competitions", "Athletes", "Ranges", "More"].map(
+          {["Home", "About", "News", "Competitions", "Shooters", "Ranges", "More"].map(
             (item, index) => (
               <Link
                 key={index}

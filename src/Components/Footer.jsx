@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start">
         {/* Logo Section */}
         <div className="bg-yellow-500 px-10 py-6 rounded-lg flex flex-col items-center">
-          <span className="text-black text-4xl">🎯</span>
-          <span className="text-black font-semibold text-lg mt-2">
+        <span className="mr-2"><img src="/logo.jpg" className="w-14 h-14" alt="" /></span> 
+        <span className="text-black font-semibold text-lg mt-2">
             Global Shooting League
           </span>
         </div>
