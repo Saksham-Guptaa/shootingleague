@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="relative bg-yellow-500 px-6 py-2 flex items-center ">
           <div className="absolute right-0 top-0 h-full w-6 bg-blue-900 clip-triangle"></div>
           <span className="text-black font-bold text-lg flex items-center">
-            <span className="mr-2"><img src="/logo.jpg" className="w-14 h-14" alt="" /></span> Global Shooting League
+            <span className="mr-2"><img src="/logo.png" className="w-14 h-14" alt="" /></span> Global Shooting League
           </span>
         </div>
 

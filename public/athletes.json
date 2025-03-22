@@ -10,7 +10,7 @@
     "weight": "73kg",
     "country": "South Korea",
     "flag": "/flags/south-korea.png",
-    "image": "/images/jin-jong-oh.jpg",
+    "image": "/images/KOCIS_London_Korea_Jinjongoh_Shooting_06_(7683325808).png",
     "medals": {
       "Olympic Games": { "gold": 4, "silver": 2, "bronze": 0 },
       "World Championships": { "gold": 4, "silver": 3, "bronze": 2 },
@@ -47,7 +47,7 @@
     "weight": "78kg",
     "country": "Italy",
     "flag": "/flags/italy.png",
-    "image": "/images/niccolo-campriani.jpg",
+    "image": "/images/NIccol_CAMPRIANI_big.png",
     "medals": {
       "Olympic Games": { "gold": 3, "silver": 1, "bronze": 0 },
       "World Championships": { "gold": 1, "silver": 3, "bronze": 1 },
@@ -84,7 +84,7 @@
     "weight": "76kg",
     "country": "India",
     "flag": "/flags/india.png",
-    "image": "/images/abhinav-bindra.jpg",
+    "image": "/images/Frame 98 (3).png",
     "medals": {
       "Olympic Games": { "gold": 1, "silver": 0, "bronze": 0 },
       "World Championships": { "gold": 1, "silver": 0, "bronze": 0 },
@@ -121,7 +121,7 @@
     "weight": "80kg",
     "country": "USA",
     "flag": "/flags/usa.png",
-    "image": "/images/vincent-hancock.jpg",
+    "image": "/images/images.png",
     "medals": {
       "Olympic Games": { "gold": 3, "silver": 0, "bronze": 0 },
       "World Championships": { "gold": 5, "silver": 0, "bronze": 0 },
@@ -155,43 +155,7 @@
       }
     ]
   },
-  {
-    "id": 5,
-    "name": "Zhang Jingjing",
-    "gender": "Male",
-    "birthday": "02.04.1988",
-    "age": 36,
-    "residence": "China",
-    "height": "1.75m",
-    "weight": "70kg",
-    "country": "China",
-    "flag": "/flags/china.png",
-    "image": "/images/zhang-jingjing.jpg",
-    "medals": {
-      "Olympic Games": { "gold": 2, "silver": 1, "bronze": 0 },
-      "World Championships": { "gold": 3, "silver": 2, "bronze": 1 },
-      "World Cup": { "gold": 12, "silver": 9, "bronze": 5 },
-      "Asian Games": { "gold": 3, "silver": 2, "bronze": 1 }
-    },
-    "achievements": [
-      {
-        "rank": 1,
-        "event": "25m Rapid Fire Pistol Men",
-        "city": "Rio",
-        "year": 2016,
-        "qualification": "590",
-        "final": "35"
-      },
-      {
-        "rank": 1,
-        "event": "25m Rapid Fire Pistol Mixed Team",
-        "city": "Tokyo",
-        "year": 2021,
-        "qualification": "590",
-        "final": "36"
-      }
-    ]
-  },
+ 
   {
     "id": 6,
     "name": "Matthew Emmons",
@@ -203,7 +167,7 @@
     "weight": "82kg",
     "country": "USA",
     "flag": "/flags/usa.png",
-    "image": "/images/matthew-emmons.jpg",
+    "image": "/images/Frame 98 (7).png",
     "medals": {
       "Olympic Games": { "gold": 1, "silver": 1, "bronze": 1 },
       "World Championships": { "gold": 5, "silver": 4, "bronze": 2 },
@@ -240,7 +204,7 @@
     "weight": "75kg",
     "country": "Belarus",
     "flag": "/flags/belarus.png",
-    "image": "/images/sergei-martynov.jpg",
+    "image": "/images/Sergei_Martynov_(sport_shooter) 1.png",
     "medals": {
       "Olympic Games": { "gold": 1, "silver": 0, "bronze": 2 },
       "World Championships": { "gold": 3, "silver": 2, "bronze": 3 },
@@ -277,7 +241,7 @@
     "weight": "78kg",
     "country": "India",
     "flag": "/flags/india.png",
-    "image": "/images/gagan-narang.jpg",
+    "image": "/images/XIX_Commonwealth_Games-2010_Delhi_Gagan_Narang_won_the_Gold_medal_in_(Men’s)_Shooting_Rifle_50m_pairs_(cropped).png",
     "medals": {
       "Olympic Games": { "gold": 0, "silver": 0, "bronze": 1 },
       "World Championships": { "gold": 0, "silver": 1, "bronze": 1 },
@@ -314,7 +278,7 @@
     "weight": "85kg",
     "country": "India",
     "flag": "/flags/india.png",
-    "image": "/images/rajyavardhan-rathore.jpg",
+    "image": "/images/Frame 98 (6).png",
     "medals": {
       "Olympic Games": { "gold": 0, "silver": 1, "bronze": 0 },
       "World Championships": { "gold": 1, "silver": 0, "bronze": 0 },
@@ -351,7 +315,7 @@
     "weight": "68kg",
     "country": "China",
     "flag": "/flags/china.png",
-    "image": "/images/zhu-qinan.jpg",
+    "image": "/images/Frame 98.png",
     "medals": {
       "Olympic Games": { "gold": 1, "silver": 1, "bronze": 0 },
       "World Championships": { "gold": 2, "silver": 1, "bronze": 1 },
@@ -388,7 +352,7 @@
     "weight": "58kg",
     "country": "Russia",
     "flag": "/flags/russia.png",
-    "image": "/images/vitalina-batsarashkina.jpg",
+    "image": "/images/Frame 98 (5).png",
     "medals": {
       "Olympic Games": { "gold": 3, "silver": 2, "bronze": 0 },
       "World Championships": { "gold": 3, "silver": 2, "bronze": 3 },
@@ -414,43 +378,7 @@
       }
     ]
   },
-  {
-    "id": 12,
-    "name": "Yang Qian",
-    "gender": "Female",
-    "birthday": "10.07.2000",
-    "age": 24,
-    "residence": "China",
-    "height": "1.67m",
-    "weight": "57kg",
-    "country": "China",
-    "flag": "/flags/china.png",
-    "image": "/images/yang-qian.jpg",
-    "medals": {
-      "Olympic Games": { "gold": 2, "silver": 0, "bronze": 0 },
-      "World Championships": { "gold": 2, "silver": 1, "bronze": 1 },
-      "World Cup": { "gold": 5, "silver": 3, "bronze": 2 },
-      "Asian Games": { "gold": 2, "silver": 1, "bronze": 0 }
-    },
-    "achievements": [
-      {
-        "rank": 1,
-        "event": "10m Air Rifle Women",
-        "city": "Tokyo",
-        "year": 2021,
-        "qualification": "631.7",
-        "final": "251.8"
-      },
-      {
-        "rank": 1,
-        "event": "10m Air Rifle Mixed Team",
-        "city": "Tokyo",
-        "year": 2021,
-        "qualification": "632.6",
-        "final": "17-13"
-      }
-    ]
-  },
+
   {
     "id": 13,
     "name": "Kimberly Rhode",
@@ -462,7 +390,7 @@
     "weight": "63kg",
     "country": "USA",
     "flag": "/flags/usa.png",
-    "image": "/images/kimberly-rhode.jpg",
+    "image": "/images/Frame 98 (1).png",
     "medals": {
       "Olympic Games": { "gold": 3, "silver": 1, "bronze": 2 },
       "World Championships": { "gold": 4, "silver": 3, "bronze": 2 },
@@ -499,7 +427,7 @@
     "weight": "60kg",
     "country": "India",
     "flag": "/flags/india.png",
-    "image": "/images/manu-bhaker.jpg",
+    "image": "/images/image 20.png",
     "medals": {
       "Olympic Games": { "gold": 0, "silver": 0, "bronze": 2 },
       "World Championships": { "gold": 0, "silver": 1, "bronze": 0 },
@@ -536,7 +464,7 @@
     "weight": "56kg",
     "country": "China",
     "flag": "/flags/china.png",
-    "image": "/images/yi-siling.jpg",
+    "image": "/images/yi-siling 1.png",
     "medals": {
       "Olympic Games": { "gold": 1, "silver": 0, "bronze": 1 },
       "World Championships": { "gold": 2, "silver": 1, "bronze": 1 },
@@ -573,7 +501,7 @@
     "weight": "59kg",
     "country": "South Korea",
     "flag": "/flags/south-korea.png",
-    "image": "/images/jin-jong.jpg",
+    "image": "/images/jin jongoh.png",
     "medals": {
       "Olympic Games": { "gold": 2, "silver": 1, "bronze": 0 },
       "World Championships": { "gold": 3, "silver": 2, "bronze": 1 },
@@ -610,7 +538,7 @@
     "weight": "64kg",
     "country": "China",
     "flag": "/flags/china.png",
-    "image": "/images/wei-meng.jpg",
+    "image": "/images/117315401_14fec8f0-1d4d-410b-855a-7fd0b7bb003dcopycopy.png",
     "medals": {
       "Olympic Games": { "gold": 0, "silver": 0, "bronze": 1 },
       "World Championships": { "gold": 2, "silver": 1, "bronze": 1 },
@@ -647,7 +575,7 @@
     "weight": "58kg",
     "country": "China",
     "flag": "/flags/china.png",
-    "image": "/images/zhang-mengxue.jpg",
+    "image": "/images/Frame 98 (4).png",
     "medals": {
       "Olympic Games": { "gold": 1, "silver": 0, "bronze": 0 },
       "World Championships": { "gold": 1, "silver": 1, "bronze": 2 },
@@ -684,7 +612,7 @@
     "weight": "62kg",
     "country": "Greece",
     "flag": "/flags/greece.png",
-    "image": "/images/anna-korakaki.jpg",
+    "image": "/images/anna korakaki.png",
     "medals": {
       "Olympic Games": { "gold": 1, "silver": 0, "bronze": 1 },
       "World Championships": { "gold": 2, "silver": 1, "bronze": 0 },
@@ -721,7 +649,7 @@
     "weight": "57kg",
     "country": "India",
     "flag": "/flags/india.png",
-    "image": "/images/apurvi-chandela.jpg",
+    "image": "/images/Apurvi_Chandela_at_the_12th_South_Asian_Games_2016 1.png",
     "medals": {
       "Olympic Games": { "gold": 0, "silver": 0, "bronze": 0 },
       "World Championships": { "gold": 0, "silver": 1, "bronze": 0 },

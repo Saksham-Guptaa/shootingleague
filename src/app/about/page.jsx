@@ -18,7 +18,7 @@ const Page = () => {
             {/* Image Section */}
             <div className="h-60 w-full overflow-hidden rounded-lg bg-gray-300 shadow-md md:h-80">
               <img
-                src="/programs.jpg"
+                src="/siteimages/GSL 1 (1).JPG"
                 alt="Image"
                 className="h-full w-full object-cover"
               />
@@ -98,7 +98,7 @@ const Page = () => {
         </section>    
 
         <section>
-            <PartnersSection/>
+            {/* <PartnersSection/> */}
         </section>
       </div>
     </>

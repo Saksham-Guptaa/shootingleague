@@ -123,7 +123,7 @@ const Competitions = () => {
         </div>
       </div>
 
-      <PartnersSection />
+      {/* <PartnersSection /> */}
     </div>
   );
 };

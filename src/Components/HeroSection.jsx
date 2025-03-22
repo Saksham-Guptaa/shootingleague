@@ -125,7 +125,7 @@ const HeroSection = () => {
                 <img src={news.image} alt={news.title} className="w-full h-40 object-cover" />
                 <div className="p-3">
                   <p className="text-xs text-white">{news.category}</p>
-                  <p className="text-sm font-semibold">{news.title}</p>
+                  <p className="text-sm text-white font-semibold">{news.title}</p>
                 </div>
               </div>
             </SwiperSlide>

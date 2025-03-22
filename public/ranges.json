@@ -8,7 +8,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 5:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/nsg-shooting.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "status": "Open",
     "openingHours": "8:00 AM - 6:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/ncc-shooting.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 5:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/ssb-shooting.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "status": "Open",
     "openingHours": "8:00 AM - 5:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/police-sports-shooting.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 4:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/ins-agrani.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "status": "Open",
     "openingHours": "10:00 AM - 6:00 PM",
     "price": "₹400 per session",
-    "image": "/images/spring-dale.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 5:00 PM",
     "price": "₹350 per session",
-    "image": "/images/kundan-vidya.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "status": "Open",
     "openingHours": "8:00 AM - 6:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/air-force-sports.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 5:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/crpf-shooting.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
     "status": "Open",
     "openingHours": "10:00 AM - 5:00 PM",
     "price": "₹400 per session",
-    "image": "/images/daly-college.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 4:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/ordnance-factories.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
     "status": "Open",
     "openingHours": "10:00 AM - 6:00 PM",
     "price": "₹600 per session",
-    "image": "/images/moti-bagh.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 5:00 PM",
     "price": "₹350 per session",
-    "image": "/images/motilal-nehru.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
     "status": "Open",
     "openingHours": "8:00 AM - 4:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/bsf-shooting.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 15,
@@ -162,7 +162,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 5:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/cisf-shooting.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 16,
@@ -173,7 +173,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 4:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/dgqa-sports.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 17,
@@ -184,7 +184,7 @@
     "status": "Open",
     "openingHours": "10:00 AM - 5:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/air-india.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 18,
@@ -195,7 +195,7 @@
     "status": "Open",
     "openingHours": "8:00 AM - 4:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/army-marksmanship.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 19,
@@ -206,7 +206,7 @@
     "status": "Open",
     "openingHours": "10:00 AM - 6:00 PM",
     "price": "₹500 per session",
-    "image": "/images/saraswati-rifle.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 20,
@@ -217,7 +217,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 5:00 PM",
     "price": "₹300 per session",
-    "image": "/images/dashmesh-rifle.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 21,
@@ -228,7 +228,7 @@
     "status": "Open",
     "openingHours": "8:00 AM - 5:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/itbp-shooting.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 22,
@@ -239,7 +239,7 @@
     "status": "Open",
     "openingHours": "10:00 AM - 6:00 PM",
     "price": "₹350 per session",
-    "image": "/images/deep-memorial.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 23,
@@ -250,7 +250,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 7:00 PM",
     "price": "₹600 per session",
-    "image": "/images/gagan-narang.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 24,
@@ -261,7 +261,7 @@
     "status": "Open",
     "openingHours": "10:00 AM - 6:00 PM",
     "price": "₹450 per session",
-    "image": "/images/amity-shooting.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 25,
@@ -272,7 +272,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 5:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/iaf-sports.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 26,
@@ -283,7 +283,7 @@
     "status": "Open",
     "openingHours": "8:00 AM - 4:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/pap-shooting.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 27,
@@ -294,7 +294,7 @@
     "status": "Open",
     "openingHours": "10:00 AM - 6:00 PM",
     "price": "₹400 per session",
-    "image": "/images/kotah-rifle.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 28,
@@ -305,7 +305,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 5:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/ongc-shooting.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 29,
@@ -316,7 +316,7 @@
     "status": "Open",
     "openingHours": "10:00 AM - 5:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/revenue-officers.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 30,
@@ -327,7 +327,7 @@
     "status": "Open",
     "openingHours": "9:00 AM - 4:00 PM",
     "price": "₹300 per session",
-    "image": "/images/godwin-school.jpg"
+    "image": "/rangeimg.png"
   },
   {
     "id": 31,
@@ -338,7 +338,7 @@
     "status": "Open",
     "openingHours": "10:00 AM - 6:00 PM",
     "price": "₹450 per session",
-    "image": "/images/manav-rachna.jpg"
+    "image": "//rangeimg.png"
   },
   {
     "id": 32,
@@ -349,7 +349,7 @@
     "status": "Open",
     "openingHours": "8:00 AM - 4:00 PM",
     "price": "Contact for pricing",
-    "image": "/images/assam-rifles.jpg"
+    "image": "//rangeimg.png"
   },
   {
     "id": 33,
@@ -360,6 +360,6 @@
     "status": "Open",
     "openingHours": "9:00 AM - 5:00 PM",
     "price": "₹400 per session",
-    "image": "/images/yadavindra-school.jpg"
+    "image": "//rangeimg.png"
   }
 ]

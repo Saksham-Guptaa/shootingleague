@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^12.5.0",
     "leaflet": "^1.9.4",
+    "lucide-react": "^0.483.0",
     "next": "15.2.1",
+    "pdfjs": "^2.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-leaflet": "^5.0.0",
+    "react-pdf": "^9.2.1",
     "react-slick": "^0.30.3",
     "react-swiper": "^0.1.5",
     "slick-carousel": "^1.8.1",

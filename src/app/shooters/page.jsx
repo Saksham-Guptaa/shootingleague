@@ -43,7 +43,7 @@ const Athletes = () => {
           <div
             key={athlete.id}
             className="bg-white rounded-lg shadow-md overflow-hidden p-4 text-center cursor-pointer"
-            onClick={() => router.push(`/athletes/${athlete.id}`)}
+            onClick={() => router.push(`/shooters/${athlete.id}`)}
           >
             <img
               src={athlete.image}
@@ -53,14 +53,13 @@ const Athletes = () => {
             />
             <h2 className="text-xl font-bold mt-2">{athlete.name}</h2>
             <div className="flex justify-center items-center gap-2 my-1">
-              <Image src={athlete.flag} alt={athlete.country} width={24} height={16} />
               <span className="text-gray-600">{athlete.gender}</span>
             </div>
-            <p className="text-gray-500">Year of Birth: {athlete.yearOfBirth}</p>
+            <p className="text-gray-500">Birth Day: {athlete.birthday}</p>
           </div>
         ))}
       </div>
-      <PartnersSection/>
+      {/* <PartnersSection/> */}
     </div>
   );
 };

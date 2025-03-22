@@ -1,12 +1,13 @@
 "use client"
 import { useState, useEffect } from 'react';
-
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 const RankingsSection = () => {
   const [athletes, setAthletes] = useState({
     men: [],
     women: []
   });
-  
+  const router = useRouter();
   const [menSearchTerm, setMenSearchTerm] = useState('');
   const [womenSearchTerm, setWomenSearchTerm] = useState('');
   
@@ -124,7 +125,7 @@ const RankingsSection = () => {
     
     setFilteredWomen(sorted);
   }, [womenSearchTerm, womenSortOption, athletes.women]);
-
+console.log(filteredMen)
   return (
     <section className="py-12 bg-white px-4 md:px-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -132,7 +133,7 @@ const RankingsSection = () => {
         <div>
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg text-black md:text-2xl font-bold">MEN&apos;S RANKINGS</h2>
-            <a href="#" className="text-blue-500 text-sm">SEE ALL</a>
+            <Link href="/shooters" className="text-blue-500 text-sm">SEE ALL</Link>
           </div>
           
           {/* Men's search and sort */}
@@ -160,9 +161,9 @@ const RankingsSection = () => {
           
           <div className="mt-4 space-y-4">
             {filteredMen.length > 0 ? (
-              filteredMen.slice(0, 4).map((athlete, index) => (
-                <div key={index} className="flex items-center justify-between bg-gray-200 rounded-lg shadow-md overflow-hidden">
-                  <div className="p-4">
+              filteredMen.slice(0, 4).map((athlete, id) => (
+                <div   key={id} className="flex items-center justify-between bg-gray-200 rounded-lg shadow-md overflow-hidden">
+                  <div className="p-4" >
                     <p className="text-xs text-gray-600">{athlete.event}</p>
                     <h3 className="text-md font-semibold">{athlete.name}</h3>
                     <div className="flex items-center mt-1 text-xs text-gray-500">
@@ -171,7 +172,7 @@ const RankingsSection = () => {
                       <span>Age: {athlete.age}</span>
                     </div>
                   </div>
-                  <img src={athlete.img} alt={athlete.name} className="w-20 h-20 object-cover rounded-lg" />
+                  <img src={athlete.img} alt={athlete.name} onClick={() => router.push(`/shooters/${athlete.id}`)} className="w-20 h-20 object-cover rounded-lg" />
                 </div>
               ))
             ) : (
@@ -184,7 +185,7 @@ const RankingsSection = () => {
         <div>
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg text-black md:text-2xl font-bold">WOMEN&apos;S RANKINGS</h2>
-            <a href="#" className="text-blue-500 text-sm">SEE ALL</a>
+            <Link href="/shooters" className="text-blue-500 text-sm">SEE ALL</Link>
           </div>
           
           {/* Women's search and sort */}

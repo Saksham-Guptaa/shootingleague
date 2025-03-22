@@ -32,7 +32,6 @@ const AthleteProfile = () => {
         <div className="ml-6">
           <h1 className="text-3xl font-bold">{athlete.name}</h1>
           <div className="flex items-center mt-2">
-            <Image src={athlete.flag} alt={athlete.country} width={24} height={16} />
             <span className="ml-2">{athlete.country}</span>
           </div>
           <p className="mt-2"><strong>GENDER:</strong> {athlete.gender}</p>
