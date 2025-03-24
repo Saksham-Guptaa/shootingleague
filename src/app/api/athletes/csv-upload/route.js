@@ -1,12 +1,14 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import jwt from 'jsonwebtoken';
+
+const JWT_SECRET = process.env.JWT_SECRET || 'gihijlbnnj;78978907908'; // Use same secret as login
 
 // Handler for POST requests
 export async function POST(request) {
-  // Get authorization headers
+  // Get authorization header
   const authHeader = request.headers.get('authorization');
-  const userId = request.headers.get('user-id');
   
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -14,9 +16,19 @@ export async function POST(request) {
   
   const token = authHeader.split(' ')[1];
   
-  // In a real app, you would validate the token
-  if (!token || !userId) {
-    return NextResponse.json({ error: 'Invalid token or user ID' }, { status: 401 });
+  // Validate the token and extract user ID
+  let userId;
+  try {
+    // Verify and decode the JWT token
+    const decoded = jwt.verify(token, JWT_SECRET);
+    userId = decoded.id; // Extract user ID from token
+    
+    if (!userId) {
+      return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
+    }
+  } catch (error) {
+    console.error('Token verification error:', error);
+    return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
   }
 
   try {
