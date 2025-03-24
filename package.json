@@ -9,10 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
     "framer-motion": "^12.5.0",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.483.0",
     "next": "15.2.1",
+    "next-auth": "^4.24.11",
+    "papaparse": "^5.5.2",
+    "path": "^0.12.7",
     "pdfjs": "^2.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -27,6 +34,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "22.13.9",
     "@types/react": "19.0.10",
     "eslint": "^9",

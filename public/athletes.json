@@ -12,10 +12,26 @@
     "flag": "/flags/south-korea.png",
     "image": "/images/KOCIS_London_Korea_Jinjongoh_Shooting_06_(7683325808).png",
     "medals": {
-      "Olympic Games": { "gold": 4, "silver": 2, "bronze": 0 },
-      "World Championships": { "gold": 4, "silver": 3, "bronze": 2 },
-      "World Cup": { "gold": 10, "silver": 8, "bronze": 5 },
-      "Asian Games": { "gold": 3, "silver": 1, "bronze": 2 }
+      "Olympic Games": {
+        "gold": 4,
+        "silver": 2,
+        "bronze": 0
+      },
+      "World Championships": {
+        "gold": 4,
+        "silver": 3,
+        "bronze": 2
+      },
+      "World Cup": {
+        "gold": 10,
+        "silver": 8,
+        "bronze": 5
+      },
+      "Asian Games": {
+        "gold": 3,
+        "silver": 1,
+        "bronze": 2
+      }
     },
     "achievements": [
       {
@@ -49,10 +65,26 @@
     "flag": "/flags/italy.png",
     "image": "/images/NIccol_CAMPRIANI_big.png",
     "medals": {
-      "Olympic Games": { "gold": 3, "silver": 1, "bronze": 0 },
-      "World Championships": { "gold": 1, "silver": 3, "bronze": 1 },
-      "World Cup": { "gold": 8, "silver": 5, "bronze": 4 },
-      "European Championships": { "gold": 4, "silver": 2, "bronze": 1 }
+      "Olympic Games": {
+        "gold": 3,
+        "silver": 1,
+        "bronze": 0
+      },
+      "World Championships": {
+        "gold": 1,
+        "silver": 3,
+        "bronze": 1
+      },
+      "World Cup": {
+        "gold": 8,
+        "silver": 5,
+        "bronze": 4
+      },
+      "European Championships": {
+        "gold": 4,
+        "silver": 2,
+        "bronze": 1
+      }
     },
     "achievements": [
       {
@@ -86,10 +118,26 @@
     "flag": "/flags/india.png",
     "image": "/images/Frame 98 (3).png",
     "medals": {
-      "Olympic Games": { "gold": 1, "silver": 0, "bronze": 0 },
-      "World Championships": { "gold": 1, "silver": 0, "bronze": 0 },
-      "World Cup": { "gold": 4, "silver": 3, "bronze": 2 },
-      "Asian Games": { "gold": 3, "silver": 2, "bronze": 2 }
+      "Olympic Games": {
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0
+      },
+      "World Championships": {
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0
+      },
+      "World Cup": {
+        "gold": 4,
+        "silver": 3,
+        "bronze": 2
+      },
+      "Asian Games": {
+        "gold": 3,
+        "silver": 2,
+        "bronze": 2
+      }
     },
     "achievements": [
       {
@@ -123,10 +171,26 @@
     "flag": "/flags/usa.png",
     "image": "/images/images.png",
     "medals": {
-      "Olympic Games": { "gold": 3, "silver": 0, "bronze": 0 },
-      "World Championships": { "gold": 5, "silver": 0, "bronze": 0 },
-      "World Cup": { "gold": 14, "silver": 6, "bronze": 4 },
-      "Pan American Games": { "gold": 2, "silver": 0, "bronze": 0 }
+      "Olympic Games": {
+        "gold": 3,
+        "silver": 0,
+        "bronze": 0
+      },
+      "World Championships": {
+        "gold": 5,
+        "silver": 0,
+        "bronze": 0
+      },
+      "World Cup": {
+        "gold": 14,
+        "silver": 6,
+        "bronze": 4
+      },
+      "Pan American Games": {
+        "gold": 2,
+        "silver": 0,
+        "bronze": 0
+      }
     },
     "achievements": [
       {
@@ -155,7 +219,6 @@
       }
     ]
   },
- 
   {
     "id": 6,
     "name": "Matthew Emmons",
@@ -169,10 +232,26 @@
     "flag": "/flags/usa.png",
     "image": "/images/Frame 98 (7).png",
     "medals": {
-      "Olympic Games": { "gold": 1, "silver": 1, "bronze": 1 },
-      "World Championships": { "gold": 5, "silver": 4, "bronze": 2 },
-      "World Cup": { "gold": 15, "silver": 12, "bronze": 8 },
-      "Pan American Games": { "gold": 2, "silver": 1, "bronze": 0 }
+      "Olympic Games": {
+        "gold": 1,
+        "silver": 1,
+        "bronze": 1
+      },
+      "World Championships": {
+        "gold": 5,
+        "silver": 4,
+        "bronze": 2
+      },
+      "World Cup": {
+        "gold": 15,
+        "silver": 12,
+        "bronze": 8
+      },
+      "Pan American Games": {
+        "gold": 2,
+        "silver": 1,
+        "bronze": 0
+      }
     },
     "achievements": [
       {
@@ -206,10 +285,26 @@
     "flag": "/flags/belarus.png",
     "image": "/images/Sergei_Martynov_(sport_shooter) 1.png",
     "medals": {
-      "Olympic Games": { "gold": 1, "silver": 0, "bronze": 2 },
-      "World Championships": { "gold": 3, "silver": 2, "bronze": 3 },
-      "World Cup": { "gold": 11, "silver": 7, "bronze": 9 },
-      "European Championships": { "gold": 5, "silver": 3, "bronze": 2 }
+      "Olympic Games": {
+        "gold": 1,
+        "silver": 0,
+        "bronze": 2
+      },
+      "World Championships": {
+        "gold": 3,
+        "silver": 2,
+        "bronze": 3
+      },
+      "World Cup": {
+        "gold": 11,
+        "silver": 7,
+        "bronze": 9
+      },
+      "European Championships": {
+        "gold": 5,
+        "silver": 3,
+        "bronze": 2
+      }
     },
     "achievements": [
       {
@@ -243,10 +338,26 @@
     "flag": "/flags/india.png",
     "image": "/images/XIX_Commonwealth_Games-2010_Delhi_Gagan_Narang_won_the_Gold_medal_in_(Men’s)_Shooting_Rifle_50m_pairs_(cropped).png",
     "medals": {
-      "Olympic Games": { "gold": 0, "silver": 0, "bronze": 1 },
-      "World Championships": { "gold": 0, "silver": 1, "bronze": 1 },
-      "World Cup": { "gold": 8, "silver": 6, "bronze": 5 },
-      "Commonwealth Games": { "gold": 8, "silver": 1, "bronze": 0 }
+      "Olympic Games": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1
+      },
+      "World Championships": {
+        "gold": 0,
+        "silver": 1,
+        "bronze": 1
+      },
+      "World Cup": {
+        "gold": 8,
+        "silver": 6,
+        "bronze": 5
+      },
+      "Commonwealth Games": {
+        "gold": 8,
+        "silver": 1,
+        "bronze": 0
+      }
     },
     "achievements": [
       {
@@ -280,10 +391,26 @@
     "flag": "/flags/india.png",
     "image": "/images/Frame 98 (6).png",
     "medals": {
-      "Olympic Games": { "gold": 0, "silver": 1, "bronze": 0 },
-      "World Championships": { "gold": 1, "silver": 0, "bronze": 0 },
-      "World Cup": { "gold": 3, "silver": 2, "bronze": 1 },
-      "Commonwealth Games": { "gold": 1, "silver": 0, "bronze": 0 }
+      "Olympic Games": {
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0
+      },
+      "World Championships": {
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0
+      },
+      "World Cup": {
+        "gold": 3,
+        "silver": 2,
+        "bronze": 1
+      },
+      "Commonwealth Games": {
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0
+      }
     },
     "achievements": [
       {
@@ -317,10 +444,26 @@
     "flag": "/flags/china.png",
     "image": "/images/Frame 98.png",
     "medals": {
-      "Olympic Games": { "gold": 1, "silver": 1, "bronze": 0 },
-      "World Championships": { "gold": 2, "silver": 1, "bronze": 1 },
-      "World Cup": { "gold": 9, "silver": 6, "bronze": 4 },
-      "Asian Games": { "gold": 2, "silver": 1, "bronze": 0 }
+      "Olympic Games": {
+        "gold": 1,
+        "silver": 1,
+        "bronze": 0
+      },
+      "World Championships": {
+        "gold": 2,
+        "silver": 1,
+        "bronze": 1
+      },
+      "World Cup": {
+        "gold": 9,
+        "silver": 6,
+        "bronze": 4
+      },
+      "Asian Games": {
+        "gold": 2,
+        "silver": 1,
+        "bronze": 0
+      }
     },
     "achievements": [
       {
@@ -354,10 +497,26 @@
     "flag": "/flags/russia.png",
     "image": "/images/Frame 98 (5).png",
     "medals": {
-      "Olympic Games": { "gold": 3, "silver": 2, "bronze": 0 },
-      "World Championships": { "gold": 3, "silver": 2, "bronze": 3 },
-      "World Cup": { "gold": 7, "silver": 5, "bronze": 3 },
-      "European Championships": { "gold": 5, "silver": 4, "bronze": 2 }
+      "Olympic Games": {
+        "gold": 3,
+        "silver": 2,
+        "bronze": 0
+      },
+      "World Championships": {
+        "gold": 3,
+        "silver": 2,
+        "bronze": 3
+      },
+      "World Cup": {
+        "gold": 7,
+        "silver": 5,
+        "bronze": 3
+      },
+      "European Championships": {
+        "gold": 5,
+        "silver": 4,
+        "bronze": 2
+      }
     },
     "achievements": [
       {
@@ -378,7 +537,6 @@
       }
     ]
   },
-
   {
     "id": 13,
     "name": "Kimberly Rhode",
@@ -392,10 +550,26 @@
     "flag": "/flags/usa.png",
     "image": "/images/Frame 98 (1).png",
     "medals": {
-      "Olympic Games": { "gold": 3, "silver": 1, "bronze": 2 },
-      "World Championships": { "gold": 4, "silver": 3, "bronze": 2 },
-      "World Cup": { "gold": 15, "silver": 9, "bronze": 7 },
-      "Pan American Games": { "gold": 3, "silver": 1, "bronze": 0 }
+      "Olympic Games": {
+        "gold": 3,
+        "silver": 1,
+        "bronze": 2
+      },
+      "World Championships": {
+        "gold": 4,
+        "silver": 3,
+        "bronze": 2
+      },
+      "World Cup": {
+        "gold": 15,
+        "silver": 9,
+        "bronze": 7
+      },
+      "Pan American Games": {
+        "gold": 3,
+        "silver": 1,
+        "bronze": 0
+      }
     },
     "achievements": [
       {
@@ -429,10 +603,26 @@
     "flag": "/flags/india.png",
     "image": "/images/image 20.png",
     "medals": {
-      "Olympic Games": { "gold": 0, "silver": 0, "bronze": 2 },
-      "World Championships": { "gold": 0, "silver": 1, "bronze": 0 },
-      "World Cup": { "gold": 5, "silver": 2, "bronze": 1 },
-      "Commonwealth Games": { "gold": 1, "silver": 0, "bronze": 0 }
+      "Olympic Games": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 2
+      },
+      "World Championships": {
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0
+      },
+      "World Cup": {
+        "gold": 5,
+        "silver": 2,
+        "bronze": 1
+      },
+      "Commonwealth Games": {
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0
+      }
     },
     "achievements": [
       {
@@ -466,10 +656,26 @@
     "flag": "/flags/china.png",
     "image": "/images/yi-siling 1.png",
     "medals": {
-      "Olympic Games": { "gold": 1, "silver": 0, "bronze": 1 },
-      "World Championships": { "gold": 2, "silver": 1, "bronze": 1 },
-      "World Cup": { "gold": 8, "silver": 5, "bronze": 3 },
-      "Asian Games": { "gold": 2, "silver": 1, "bronze": 1 }
+      "Olympic Games": {
+        "gold": 1,
+        "silver": 0,
+        "bronze": 1
+      },
+      "World Championships": {
+        "gold": 2,
+        "silver": 1,
+        "bronze": 1
+      },
+      "World Cup": {
+        "gold": 8,
+        "silver": 5,
+        "bronze": 3
+      },
+      "Asian Games": {
+        "gold": 2,
+        "silver": 1,
+        "bronze": 1
+      }
     },
     "achievements": [
       {
@@ -503,10 +709,26 @@
     "flag": "/flags/south-korea.png",
     "image": "/images/jin jongoh.png",
     "medals": {
-      "Olympic Games": { "gold": 2, "silver": 1, "bronze": 0 },
-      "World Championships": { "gold": 3, "silver": 2, "bronze": 1 },
-      "World Cup": { "gold": 9, "silver": 6, "bronze": 4 },
-      "Asian Games": { "gold": 3, "silver": 2, "bronze": 1 }
+      "Olympic Games": {
+        "gold": 2,
+        "silver": 1,
+        "bronze": 0
+      },
+      "World Championships": {
+        "gold": 3,
+        "silver": 2,
+        "bronze": 1
+      },
+      "World Cup": {
+        "gold": 9,
+        "silver": 6,
+        "bronze": 4
+      },
+      "Asian Games": {
+        "gold": 3,
+        "silver": 2,
+        "bronze": 1
+      }
     },
     "achievements": [
       {
@@ -540,10 +762,26 @@
     "flag": "/flags/china.png",
     "image": "/images/117315401_14fec8f0-1d4d-410b-855a-7fd0b7bb003dcopycopy.png",
     "medals": {
-      "Olympic Games": { "gold": 0, "silver": 0, "bronze": 1 },
-      "World Championships": { "gold": 2, "silver": 1, "bronze": 1 },
-      "World Cup": { "gold": 7, "silver": 4, "bronze": 5 },
-      "Asian Games": { "gold": 1, "silver": 2, "bronze": 0 }
+      "Olympic Games": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1
+      },
+      "World Championships": {
+        "gold": 2,
+        "silver": 1,
+        "bronze": 1
+      },
+      "World Cup": {
+        "gold": 7,
+        "silver": 4,
+        "bronze": 5
+      },
+      "Asian Games": {
+        "gold": 1,
+        "silver": 2,
+        "bronze": 0
+      }
     },
     "achievements": [
       {
@@ -577,10 +815,26 @@
     "flag": "/flags/china.png",
     "image": "/images/Frame 98 (4).png",
     "medals": {
-      "Olympic Games": { "gold": 1, "silver": 0, "bronze": 0 },
-      "World Championships": { "gold": 1, "silver": 1, "bronze": 2 },
-      "World Cup": { "gold": 5, "silver": 3, "bronze": 4 },
-      "Asian Games": { "gold": 1, "silver": 1, "bronze": 1 }
+      "Olympic Games": {
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0
+      },
+      "World Championships": {
+        "gold": 1,
+        "silver": 1,
+        "bronze": 2
+      },
+      "World Cup": {
+        "gold": 5,
+        "silver": 3,
+        "bronze": 4
+      },
+      "Asian Games": {
+        "gold": 1,
+        "silver": 1,
+        "bronze": 1
+      }
     },
     "achievements": [
       {
@@ -614,10 +868,26 @@
     "flag": "/flags/greece.png",
     "image": "/images/anna korakaki.png",
     "medals": {
-      "Olympic Games": { "gold": 1, "silver": 0, "bronze": 1 },
-      "World Championships": { "gold": 2, "silver": 1, "bronze": 0 },
-      "World Cup": { "gold": 6, "silver": 5, "bronze": 3 },
-      "European Championships": { "gold": 4, "silver": 2, "bronze": 2 }
+      "Olympic Games": {
+        "gold": 1,
+        "silver": 0,
+        "bronze": 1
+      },
+      "World Championships": {
+        "gold": 2,
+        "silver": 1,
+        "bronze": 0
+      },
+      "World Cup": {
+        "gold": 6,
+        "silver": 5,
+        "bronze": 3
+      },
+      "European Championships": {
+        "gold": 4,
+        "silver": 2,
+        "bronze": 2
+      }
     },
     "achievements": [
       {
@@ -651,10 +921,26 @@
     "flag": "/flags/india.png",
     "image": "/images/Apurvi_Chandela_at_the_12th_South_Asian_Games_2016 1.png",
     "medals": {
-      "Olympic Games": { "gold": 0, "silver": 0, "bronze": 0 },
-      "World Championships": { "gold": 0, "silver": 1, "bronze": 0 },
-      "World Cup": { "gold": 3, "silver": 1, "bronze": 2 },
-      "Commonwealth Games": { "gold": 1, "silver": 0, "bronze": 1 }
+      "Olympic Games": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 0
+      },
+      "World Championships": {
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0
+      },
+      "World Cup": {
+        "gold": 3,
+        "silver": 1,
+        "bronze": 2
+      },
+      "Commonwealth Games": {
+        "gold": 1,
+        "silver": 0,
+        "bronze": 1
+      }
     },
     "achievements": [
       {
@@ -672,6 +958,61 @@
         "year": 2019,
         "qualification": "630.9",
         "final": "251.0"
+      }
+    ]
+  },
+  {
+    "id": 1742772218522,
+    "name": "Saksham Gupta",
+    "gender": "Male",
+    "birthday": "27.12.2003",
+    "age": 21,
+    "residence": "USA",
+    "height": "1.75m",
+    "weight": "80",
+    "country": "USA",
+    "flag": "/flags/usa.png",
+    "image": "/images/default-profile.png",
+    "email": "creator.sakshamgupta@gmail.com",
+    "medals": {
+      "Olympic Games": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 0
+      },
+      "World Championships": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 0
+      },
+      "World Cup": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 0
+      },
+      "Pan American Games": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 0
+      }
+    },
+    "achievements": []
+  },
+  {
+    "id": 20,
+    "sessions": [
+      {
+        "id": "1742775219400",
+        "timestamp": "2025-03-24T00:13:39.402Z"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "sessions": [
+      {
+        "id": "1742775528572",
+        "timestamp": "2025-03-24T00:18:48.574Z"
       }
     ]
   }

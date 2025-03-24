@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1742772218522,
+    "name": "Saksham Gupta",
+    "gender": "Male",
+    "birthday": "27.12.2003",
+    "age": 21,
+    "residence": "USA",
+    "height": "1.75m",
+    "weight": "80",
+    "country": "USA",
+    "flag": "/flags/usa.png",
+    "image": "/images/default-profile.png",
+    "email": "creator.sakshamgupta@gmail.com",
+    "medals": {
+      "Olympic Games": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 0
+      },
+      "World Championships": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 0
+      },
+      "World Cup": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 0
+      },
+      "Pan American Games": {
+        "gold": 0,
+        "silver": 0,
+        "bronze": 0
+      }
+    },
+    "achievements": []
+  },
+  {
+    "id": 2,
+    "sessions": [
+      {
+        "id": "1742775159023",
+        "timestamp": "2025-03-24T00:12:39.024Z"
+      }
+    ]
+  }
+]

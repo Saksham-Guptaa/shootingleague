@@ -9,6 +9,12 @@ import "swiper/css/pagination";
 const images = [
   "/images/Abhinav.jpg",
   "/news1.png",
+  "/siteimages/GSL 1 (1).JPG",
+  "/siteimages/GSL 1 (2).JPG",
+  "/siteimages/GSL 2 (1).JPG",
+  "/siteimages/GSL 1.JPG",
+  "/siteimages/GSL 2.JPG",
+  "/siteimages/GSL 13.JPG",
   "/news2.png",
   "/news3.png",
   "/news4.png",
