@@ -1,28 +1,31 @@
-// pages/api/upload-session.js
+import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-  const authHeader = req.headers.authorization;
+// Handler for POST requests
+export async function POST(request) {
+  // Get authorization headers
+  const authHeader = request.headers.get('authorization');
+  const userId = request.headers.get('user-id');
+  
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return res.status(401).json({ error: 'Unauthorized' });
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
+  
   const token = authHeader.split(' ')[1];
-  const userId = req.headers['user-id'];
   
   // In a real app, you would validate the token
   if (!token || !userId) {
-    return res.status(401).json({ error: 'Invalid token or user ID' });
+    return NextResponse.json({ error: 'Invalid token or user ID' }, { status: 401 });
   }
 
   try {
-    const { csvData, sessionName, date } = req.body;
+    // Parse request body
+    const body = await request.json();
+    const { csvData, sessionName, date } = body;
     
     if (!csvData || !sessionName) {
-      return res.status(400).json({ error: 'Missing required fields' });
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
     
     // Read the athletes data from the JSON file
@@ -40,7 +43,7 @@ export default async function handler(req, res) {
     const athleteIndex = athletes.findIndex(a => a.id.toString() === userId.toString());
     
     if (athleteIndex === -1) {
-      return res.status(404).json({ error: 'Athlete not found' });
+      return NextResponse.json({ error: 'Athlete not found' }, { status: 404 });
     }
     
     // Create a new session
@@ -61,18 +64,9 @@ export default async function handler(req, res) {
     // Write the updated data back to the file
     fs.writeFileSync(dataFilePath, JSON.stringify(athletes, null, 2));
     
-    res.status(200).json({ success: true, session: newSession });
+    return NextResponse.json({ success: true, session: newSession }, { status: 200 });
   } catch (error) {
     console.error('Error processing CSV upload:', error);
-    res.status(500).json({ error: 'Failed to process CSV upload' });
+    return NextResponse.json({ error: 'Failed to process CSV upload' }, { status: 500 });
   }
 }
-
-// Configure API route to handle larger payloads if needed
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '4mb', // Adjust based on your expected CSV file sizes
-    },
-  },
-};
