@@ -13,6 +13,9 @@ export default function AthleteDashboard() {
   const [csvHeaders, setCsvHeaders] = useState([]);
   const [otherAthletes, setOtherAthletes] = useState([]);
   const [selectedAthlete, setSelectedAthlete] = useState(null);
+  const [sessionName, setSessionName] = useState('');
+  const [sessions, setSessions] = useState([]);
+  const [viewingSession, setViewingSession] = useState(null);
 
   useEffect(() => {
     // Check for token in localStorage
@@ -36,6 +39,11 @@ export default function AthleteDashboard() {
         if (response.ok) {
           const data = await response.json();
           setAthlete(data);
+          
+          // Fetch sessions for the current athlete
+          if (data.sessions) {
+            setSessions(data.sessions);
+          }
         } else {
           // Handle unauthorized or error
           if (response.status === 401) {
@@ -82,9 +90,6 @@ export default function AthleteDashboard() {
           if (results.data.length > 0) {
             setCsvHeaders(Object.keys(results.data[0]));
           }
-          
-          // Save the CSV data to the athlete's profile
-          saveCsvData(results.data);
         },
         error: (error) => {
           console.error('Error parsing CSV:', error);
@@ -93,22 +98,56 @@ export default function AthleteDashboard() {
     }
   };
 
-  const saveCsvData = async (data) => {
+  const saveCsvData = async () => {
+    if (!sessionName.trim()) {
+      alert('Please provide a session name');
+      return;
+    }
+  
+    if (csvData.length === 0) {
+      alert('Please upload CSV data first');
+      return;
+    }
+  
+    // Check if athlete data is available
+    if (!athlete || !athlete.id) {
+      alert('Athlete information is not available. Please try again or reload the page.');
+      return;
+    }
+  
     try {
       const response = await fetch('/api/athletes/csv-upload', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
+          'Authorization': `Bearer ${token}`,
+          'user-id': athlete.id.toString()
         },
-        body: JSON.stringify({ csvData: data }),
+        body: JSON.stringify({ 
+          csvData,
+          sessionName: sessionName,
+          date: new Date().toISOString().split('T')[0]
+        }),
       });
       
       if (!response.ok) {
         throw new Error('Failed to save CSV data');
       }
       
-      // Success message or state update
+      // Update local sessions state
+      const newSession = {
+        id: Date.now(),
+        name: sessionName,
+        date: new Date().toISOString().split('T')[0],
+        data: csvData
+      };
+      
+      setSessions([...sessions, newSession]);
+      setSessionName('');
+      setCsvData([]);
+      setCsvHeaders([]);
+      
+      // Success message
       alert('Performance data uploaded successfully!');
     } catch (error) {
       console.error('Error saving CSV data:', error);
@@ -121,9 +160,21 @@ export default function AthleteDashboard() {
     setSelectedAthlete(athlete);
   };
 
+  const viewSession = (session) => {
+    setViewingSession(session);
+  };
+
+  const closeSessionView = () => {
+    setViewingSession(null);
+  };
+
   const handleLogout = () => {
     localStorage.removeItem('token');
     router.push('/login');
+  };
+
+  const getInitial = (name) => {
+    return name ? name.charAt(0).toUpperCase() : '?';
   };
 
   if (loading) {
@@ -168,16 +219,16 @@ export default function AthleteDashboard() {
                 <div className="w-full md:w-1/4">
                   <div className="rounded-lg overflow-hidden bg-gray-200 h-64 flex items-center justify-center">
                     {athlete.image ? (
-  <img 
-    src={athlete.image} 
-    alt={athlete.name} 
-    className="w-full h-full object-cover"
-  />
-) : (
-  <div className="w-full h-full flex items-center justify-center bg-blue-500 text-white text-5xl font-bold">
-    {athlete.name.charAt(0)}
-  </div>
-)}
+                      <img 
+                        src={athlete.image} 
+                        alt={athlete.name} 
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-blue-500 text-white text-5xl font-bold">
+                        {getInitial(athlete.name)}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="w-full md:w-3/4">
@@ -311,9 +362,34 @@ export default function AthleteDashboard() {
               />
             </div>
             
+            <div className="mb-6">
+              <label className="block mb-2 font-medium text-gray-700">
+                Session Name
+              </label>
+              <input
+                type="text"
+                value={sessionName}
+                onChange={(e) => setSessionName(e.target.value)}
+                placeholder="e.g. Morning Practice 2025-03-24"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+            
+            <button
+              onClick={saveCsvData}
+              disabled={csvData.length === 0 || !sessionName.trim()}
+              className={`px-4 py-2 rounded-md text-white ${
+                csvData.length === 0 || !sessionName.trim() 
+                ? 'bg-gray-400 cursor-not-allowed' 
+                : 'bg-blue-600 hover:bg-blue-700'
+              }`}
+            >
+              Save Session
+            </button>
+            
             {csvData.length > 0 && (
               <div className="mt-6">
-                <h4 className="text-lg font-semibold mb-3">Uploaded Performance Data</h4>
+                <h4 className="text-lg font-semibold mb-3">Data Preview</h4>
                 <div className="overflow-x-auto">
                   <table className="min-w-full bg-white">
                     <thead className="bg-gray-100">
@@ -324,7 +400,7 @@ export default function AthleteDashboard() {
                       </tr>
                     </thead>
                     <tbody>
-                      {csvData.map((row, rowIndex) => (
+                      {csvData.slice(0, 5).map((row, rowIndex) => (
                         <tr key={rowIndex} className="border-b">
                           {csvHeaders.map((header, colIndex) => (
                             <td key={colIndex} className="py-3 px-4">{row[header]}</td>
@@ -333,7 +409,51 @@ export default function AthleteDashboard() {
                       ))}
                     </tbody>
                   </table>
+                  {csvData.length > 5 && (
+                    <p className="text-gray-500 mt-2 text-sm">Showing 5 of {csvData.length} rows</p>
+                  )}
                 </div>
+              </div>
+            )}
+          </div>
+          
+          {/* Training Sessions Section */}
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h3 className="text-xl font-bold mb-4">My Training Sessions</h3>
+            
+            {sessions.length === 0 ? (
+              <p className="text-gray-600">
+                You haven't uploaded any training sessions yet. Start by uploading a CSV file above.
+              </p>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="min-w-full bg-white">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="py-3 px-4 text-left">Session Name</th>
+                      <th className="py-3 px-4 text-left">Date</th>
+                      <th className="py-3 px-4 text-left">Records</th>
+                      <th className="py-3 px-4 text-left">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {sessions.map((session, index) => (
+                      <tr key={index} className="border-b">
+                        <td className="py-3 px-4">{session.name}</td>
+                        <td className="py-3 px-4">{session.date}</td>
+                        <td className="py-3 px-4">{session.data ? session.data.length : 0} records</td>
+                        <td className="py-3 px-4">
+                          <button
+                            onClick={() => viewSession(session)}
+                            className="px-3 py-1 bg-blue-100 hover:bg-blue-200 text-blue-800 rounded"
+                          >
+                            View
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             )}
           </div>
@@ -342,7 +462,7 @@ export default function AthleteDashboard() {
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-bold mb-4">Athlete Directory</h3>
             <p className="text-gray-600 mb-4">
-              View profiles and stats of other athletes in the platform.
+              View profiles, stats, and training sessions of other athletes in the platform.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -355,7 +475,7 @@ export default function AthleteDashboard() {
                   onClick={() => viewAthleteDetails(otherAthlete.id)}
                 >
                   <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 bg-gray-200 rounded-full overflow-hidden">
+                    <div className="w-16 h-16 bg-blue-500 rounded-full overflow-hidden flex items-center justify-center text-white text-xl font-bold">
                       {otherAthlete.image ? (
                         <img 
                           src={otherAthlete.image} 
@@ -363,9 +483,7 @@ export default function AthleteDashboard() {
                           className="w-full h-full object-cover" 
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center text-gray-400">
-                          No img
-                        </div>
+                        getInitial(otherAthlete.name)
                       )}
                     </div>
                     <div>
@@ -380,6 +498,11 @@ export default function AthleteDashboard() {
                         )}
                         <span className="text-gray-600 text-sm">{otherAthlete.country}</span>
                       </div>
+                      {otherAthlete.sessions && (
+                        <div className="text-gray-500 text-sm mt-1">
+                          {otherAthlete.sessions.length} training session(s)
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -406,7 +529,7 @@ export default function AthleteDashboard() {
                   
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="w-full md:w-1/3">
-                      <div className="rounded-lg overflow-hidden bg-gray-200 h-64">
+                      <div className="rounded-lg overflow-hidden bg-blue-500 h-64 flex items-center justify-center text-white text-6xl font-bold">
                         {selectedAthlete.image ? (
                           <img 
                             src={selectedAthlete.image} 
@@ -414,9 +537,7 @@ export default function AthleteDashboard() {
                             className="w-full h-full object-cover" 
                           />
                         ) : (
-                          <div className="w-full h-full flex items-center justify-center text-gray-400">
-                            No Image Available
-                          </div>
+                          getInitial(selectedAthlete.name)
                         )}
                       </div>
                       
@@ -479,7 +600,7 @@ export default function AthleteDashboard() {
                       
                       {/* Achievements Section */}
                       {selectedAthlete.achievements && selectedAthlete.achievements.length > 0 && (
-                        <div>
+                        <div className="mb-6">
                           <h3 className="text-xl font-bold mb-4">Top Achievements</h3>
                           <div className="overflow-x-auto">
                             <table className="min-w-full bg-white">
@@ -509,13 +630,150 @@ export default function AthleteDashboard() {
                           </div>
                         </div>
                       )}
+                      
+                      {/* Training Sessions Section */}
+                      {selectedAthlete.sessions && selectedAthlete.sessions.length > 0 && (
+                        <div>
+                          <h3 className="text-xl font-bold mb-4">Training Sessions</h3>
+                          <div className="overflow-x-auto">
+                            <table className="min-w-full bg-white">
+                              <thead className="bg-gray-100">
+                                <tr>
+                                  <th className="py-3 px-4 text-left">Session Name</th>
+                                  <th className="py-3 px-4 text-left">Date</th>
+                                  <th className="py-3 px-4 text-left">Records</th>
+                                  <th className="py-3 px-4 text-left">Actions</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {selectedAthlete.sessions.map((session, index) => (
+                                  <tr key={index} className="border-b">
+                                    <td className="py-3 px-4">{session.name}</td>
+                                    <td className="py-3 px-4">{session.date}</td>
+                                    <td className="py-3 px-4">{session.data ? session.data.length : 0} records</td>
+                                    <td className="py-3 px-4">
+                                      <button
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          viewSession(session);
+                                        }}
+                                        className="px-3 py-1 bg-blue-100 hover:bg-blue-200 text-blue-800 rounded"
+                                      >
+                                        View
+                                      </button>
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           )}
+          
+          {/* Session Data Modal */}
+          {viewingSession && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+              <div className="bg-white rounded-lg max-w-6xl w-full max-h-screen overflow-y-auto">
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-6">
+                    <div>
+                      <h2 className="text-2xl font-bold">{viewingSession.name}</h2>
+                      <p className="text-gray-600">{viewingSession.date}</p>
+                    </div>
+                    <button 
+                      onClick={closeSessionView}
+                      className="p-2 rounded-full hover:bg-gray-100"
+                    >
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  
+                  {viewingSession.data && viewingSession.data.length > 0 ? (
+                    <div className="overflow-x-auto">
+                      <table className="min-w-full bg-white">
+                        <thead className="bg-gray-100">
+                          <tr>
+                            {Object.keys(viewingSession.data[0]).map((header, index) => (
+                              <th key={index} className="py-3 px-4 text-left">{header}</th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {viewingSession.data.map((row, rowIndex) => (
+                            <tr key={rowIndex} className="border-b">
+                              {Object.keys(viewingSession.data[0]).map((header, colIndex) => (
+                                <td key={colIndex} className="py-3 px-4">{row[header]}</td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : (
+                    <p className="text-gray-600">No data available for this session.</p>
+                  )}
+                  
+                  {/* Performance Summary Section */}
+                  {viewingSession.data && viewingSession.data.length > 0 && (
+                    <div className="mt-8">
+                      <h3 className="text-xl font-bold mb-4">Performance Summary</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {/* This would be replaced with actual performance metrics based on your data structure */}
+                        <div className="bg-blue-50 rounded-lg p-4">
+                          <h4 className="font-semibold text-blue-800 mb-2">Average Score</h4>
+                          <p className="text-3xl font-bold text-blue-600">
+                            {(viewingSession.data.reduce((sum, item) => 
+                              sum + (parseFloat(item.score) || 0), 0) / viewingSession.data.length).toFixed(2)}
+                          </p>
+                        </div>
+                        <div className="bg-green-50 rounded-lg p-4">
+                          <h4 className="font-semibold text-green-800 mb-2">Best Series</h4>
+                          <p className="text-3xl font-bold text-green-600">
+                            {Math.max(...viewingSession.data.map(item => parseFloat(item.score) || 0)).toFixed(1)}
+                          </p>
+                        </div>
+                        <div className="bg-purple-50 rounded-lg p-4">
+                          <h4 className="font-semibold text-purple-800 mb-2">Total Shots</h4>
+                          <p className="text-3xl font-bold text-purple-600">
+                            {viewingSession.data.length}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+          
         </main>
+        
+        <footer className="bg-gray-800 text-white py-6">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <div className="mb-4 md:mb-0">
+                <h2 className="text-xl font-bold">Shooting Sport Platform</h2>
+                <p className="text-gray-400">Performance tracking for champions</p>
+              </div>
+              <div className="flex space-x-4">
+                <a href="#" className="hover:text-blue-400">Terms</a>
+                <a href="#" className="hover:text-blue-400">Privacy</a>
+                <a href="#" className="hover:text-blue-400">Support</a>
+              </div>
+            </div>
+            <div className="mt-6 text-center md:text-left text-gray-400 text-sm">
+              &copy; {new Date().getFullYear()} Shooting Sport Platform. All rights reserved.
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   );

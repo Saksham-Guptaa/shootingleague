@@ -22,7 +22,6 @@ export async function POST(request) {
     
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const athletes = JSON.parse(fileContent);
-    
     // Find the user by email
     const user = athletes.find(user => user.email === email);
     
