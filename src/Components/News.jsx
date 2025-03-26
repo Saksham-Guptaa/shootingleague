@@ -41,7 +41,7 @@ const NewsForum = () => {
       {/* Title */}
       <div className="mb-6 flex items-center justify-between">
         <h1 className="text-4xl font-bold text-red-600 md:text-6xl lg:text-8xl">
-          MAGZAZINES
+          MAGAZINES
         </h1>
       </div>
 
