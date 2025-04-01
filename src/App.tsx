@@ -17,6 +17,9 @@ import ShootingRanges from "./components/pages/ranges";
 import Athletes from "./components/pages/shooters";
 import ParallaxScrollPage from "./components/pages/media";
 import ContactUs from "./components/pages/contact";
+import EventsSection from "./components/dashboard/Events";
+import EventDetailPage from "./components/pages/EventDetail";
+import EventPage from "./components/pages/EventPage";
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
   const location = useLocation();
@@ -49,6 +52,9 @@ function AppRoutes() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/shooters" element={<Athletes />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/events" element={<EventsSection />} />
+        <Route path="/events/:categoryId" element={<EventDetailPage />} />
+        <Route path="/events/:categoryId/:eventId" element={<EventPage />} />
 
         <Route path="/media" element={<ParallaxScrollPage />} />
         <Route
