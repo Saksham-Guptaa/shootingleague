@@ -32,6 +32,7 @@ import Footer from "../dashboard/Footer";
 import ExecutiveCommittee from "../dashboard/Team";
 import MediaSection from "../dashboard/Fame";
 import Layout from "./Layout";
+import EventsSection from "../dashboard/Events";
 
 export default function LandingPage() {
   const { user, signOut } = useAuth();
@@ -41,8 +42,10 @@ export default function LandingPage() {
   const [ranges, setRanges] = useState(rangesData);
   const [selectedRange, setSelectedRange] = useState(null);
   const [visibleCount, setVisibleCount] = useState(3);
-  const filteredRanges = ranges.filter((range) =>
-    range.name.toLowerCase().includes(search.toLowerCase())
+  const filteredRanges = ranges.filter(
+    (range) =>
+      range.name.toLowerCase().includes(search.toLowerCase()) ||
+      range.address.toLowerCase().includes(search.toLowerCase())
   );
 
   // Sample data for rankings
@@ -67,35 +70,35 @@ export default function LandingPage() {
     {
       title: "Focus",
       subtitle: "Clear your mind, set your intention",
-      image: "/hero1.png",
+      image: "/GSL1.JPG",
       cta: "Learn the mental game",
       url: "https://docs.google.com/forms/d/1M0X1fogAsXitDTiH6eT2PzLTeH6TkARser65F774WYE/viewform?edit_requested=true",
     },
     {
       title: "Aim",
       subtitle: "Precision is everything",
-      image: "/hero2.png",
+      image: "/GSL2.jpg",
       cta: "Improve your technique",
       url: "https://docs.google.com/forms/d/1M0X1fogAsXitDTiH6eT2PzLTeH6TkARser65F774WYE/viewform?edit_requested=true",
     },
     {
       title: "Breathe",
       subtitle: "Control your breathing, control your shot",
-      image: "/hero1.png",
+      image: "/GSL3.JPG",
       cta: "Master your breathing",
       url: "https://docs.google.com/forms/d/1M0X1fogAsXitDTiH6eT2PzLTeH6TkARser65F774WYE/viewform?edit_requested=true",
     },
     {
       title: "Shoot",
       subtitle: "Execute with confidence",
-      image: "/hero2.png",
+      image: "/GSL7.JPG",
       cta: "Perfect your form",
       url: "https://docs.google.com/forms/d/1M0X1fogAsXitDTiH6eT2PzLTeH6TkARser65F774WYE/viewform?edit_requested=true",
     },
     {
       title: "Repeat",
       subtitle: "Consistency builds champions",
-      image: "/hero1.png",
+      image: "/GSL11.JPG",
       cta: "Join our training program",
       url: "https://docs.google.com/forms/d/1M0X1fogAsXitDTiH6eT2PzLTeH6TkARser65F774WYE/viewform?edit_requested=true",
     },
@@ -140,108 +143,8 @@ export default function LandingPage() {
             </Carousel>
           </section>
           {/* <HeroSection /> */}
-          <section className="py-16 bg-white">
-            <div className="max-w-6xl mx-auto px-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-10">
-                Upcoming Events
-              </h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                  <div className="h-48 bg-gray-200 relative">
-                    <img
-                      src="/events/upcoming1.png"
-                      alt="World Championship"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-blue-700 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Jun 15-20
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">
-                      World Championship
-                    </h3>
-                    <p className="text-gray-600 mb-4">Munich, Germany</p>
-                    <p className="text-gray-700 mb-4">
-                      The premier event of the year featuring the world's top
-                      shooters competing for the championship title.
-                    </p>
-                    <Link
-                      to="/events"
-                      className="text-blue-600 hover:underline font-medium inline-flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                  <div className="h-48 bg-gray-200 relative">
-                    <img
-                      src="/events/upcoming2.png"
-                      alt="Asian Cup"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-blue-700 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Jul 8-12
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">Asian Cup</h3>
-                    <p className="text-gray-600 mb-4">Tokyo, Japan</p>
-                    <p className="text-gray-700 mb-4">
-                      A prestigious competition showcasing the best talent from
-                      across Asia in multiple shooting disciplines.
-                    </p>
-                    <Link
-                      to="/events"
-                      className="text-blue-600 hover:underline font-medium inline-flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </div>
-                </div>
-                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                  <div className="h-48 bg-gray-200 relative">
-                    <img
-                      src="/events/upcoming3.png"
-                      alt="Junior Championship"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-4 left-4 bg-blue-700 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Aug 5-8
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">
-                      Junior Championship
-                    </h3>
-                    <p className="text-gray-600 mb-4">Madrid, Spain</p>
-                    <p className="text-gray-700 mb-4">
-                      The future stars of shooting sports compete in this
-                      special event for athletes under 21 years of age.
-                    </p>
-                    <Link
-                      to="/events"
-                      className="text-blue-600 hover:underline font-medium inline-flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="text-center mt-10">
-                <Link to="/events">
-                  <Button className="bg-blue-700 hover:bg-blue-800 text-white rounded-full px-6">
-                    View All Events
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </section>
-          <section className="py-16 bg-gray-50">
+          <EventsSection />
+          {/* <section className="py-16 bg-gray-50">
             <div className="max-w-6xl mx-auto px-4">
               <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-10">
                 Global Rankings
@@ -342,65 +245,104 @@ export default function LandingPage() {
                 </TabsContent>
               </Tabs>
             </div>
-          </section>
+          </section> */}
           <RankingsSection />
           <NewsForum />
-          <div className="container mx-auto p-6">
-            <h1 className="text-3xl font-bold text-center">Shooting Ranges</h1>
-            <div className="flex justify-between items-center mt-4">
+          <div className="container mx-auto p-4 max-w-7xl">
+            <h1 className="text-4xl font-bold text-center mb-6 text-blue-800">
+              Shooting Ranges Finder
+            </h1>
+
+            <div className="mb-6">
               <input
                 type="text"
-                placeholder="Search"
-                className="border p-2 w-full rounded"
+                placeholder="Search by name or location..."
+                className="border-2 border-blue-300 p-3 w-full rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 onChange={(e) => setSearch(e.target.value)}
               />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-              <div className="bg-blue-100 p-4 rounded">
-                <h2 className="text-xl font-semibold mb-2">
-                  Showing {Math.min(visibleCount, filteredRanges.length)} of{" "}
-                  {filteredRanges.length} results
-                </h2>
-                {filteredRanges.slice(0, visibleCount).map((range) => (
-                  <button
-                    key={range.id}
-                    onClick={() => setSelectedRange(range)}
-                    className="block md:flex items-center gap-5 bg-white p-4 rounded mb-4 shadow w-full text-left"
-                  >
-                    <img
-                      src={range.image}
-                      alt={range.name}
-                      className="w-full md:w-1/2 h-32 object-cover rounded"
-                    />
-                    <div className="w-full md:w-1/2">
-                      <h3 className="text-lg font-bold mt-2">{range.name}</h3>
-                      <p>{range.address}</p>
-                      <p>
-                        {range.status} • {range.openingHours}
-                      </p>
-                      <p className="text-green-600 font-semibold">
-                        {range.price}
-                      </p>
-                    </div>
-                  </button>
-                ))}
+            {/* Map section - larger and more prominent */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+              <h2 className="bg-blue-700 text-white p-3 text-xl font-semibold">
+                Location Map
+              </h2>
+              <div className="h-96 w-full">
+                <Map ranges={filteredRanges} selectedRange={selectedRange} />
+              </div>
+            </div>
+
+            {/* Ranges section - now below the map */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <h2 className="bg-blue-700 text-white p-3 text-xl font-semibold">
+                Available Ranges ({filteredRanges.length})
+              </h2>
+
+              <div className="p-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  {filteredRanges.slice(0, visibleCount).map((range) => (
+                    <button
+                      key={range.id}
+                      onClick={() => setSelectedRange(range)}
+                      className={`flex flex-col md:flex-row items-center gap-4 p-4 rounded-lg w-full text-left transition-all duration-200 hover:shadow-md ${
+                        selectedRange?.id === range.id
+                          ? "bg-blue-50 border-2 border-blue-500"
+                          : "bg-gray-50 border border-gray-200"
+                      }`}
+                    >
+                      <img
+                        src={range.image}
+                        alt={range.name}
+                        className="w-full md:w-2/5 h-48 md:h-32 object-cover rounded-lg"
+                      />
+                      <div className="w-full md:w-3/5 mt-2 md:mt-0">
+                        <h3 className="text-xl font-bold text-blue-800">
+                          {range.name}
+                        </h3>
+                        <p className="text-gray-700 mt-1">{range.address}</p>
+                        <div className="flex items-center mt-2">
+                          <span
+                            className={`inline-block w-3 h-3 rounded-full mr-2 ${
+                              range.status === "Open"
+                                ? "bg-green-500"
+                                : "bg-red-500"
+                            }`}
+                          ></span>
+                          <span
+                            className={
+                              range.status === "Open"
+                                ? "text-green-700"
+                                : "text-red-700"
+                            }
+                          >
+                            {range.status}
+                          </span>
+                          <span className="mx-2">•</span>
+                          <span className="text-gray-600">
+                            {range.openingHours}
+                          </span>
+                        </div>
+                        <p className="text-green-600 font-semibold mt-2">
+                          {range.price}
+                        </p>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+
                 {visibleCount < filteredRanges.length && (
                   <button
                     onClick={() => setVisibleCount((prev) => prev + 3)}
-                    className="mt-4 bg-blue-500 text-white py-2 px-4 rounded w-full"
+                    className="mt-6 bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg font-medium w-full transition-colors duration-200"
                   >
-                    Load More
+                    Load More Ranges
                   </button>
                 )}
-              </div>
-              <div className="h-96">
-                <Map ranges={filteredRanges} selectedRange={selectedRange} />
               </div>
             </div>
           </div>
           <ExecutiveCommittee />
-          <MediaSection />
+          {/* <MediaSection /> */}
           <Gallery />
           {/* <TeamVictorySection /> */}
           <section className="py-20 bg-white">

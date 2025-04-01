@@ -76,19 +76,19 @@ const ParallaxScrollPage: React.FC = () => {
   // Articles data - unchanged
   const articles = [
     {
-      title: "Article 2",
+      title: "Magazine 1",
       description: "",
       image: "/mag1img.png",
       mag: "https://heyzine.com/flip-book/ecc71056ed.html",
     },
     {
-      title: "Article 3",
+      title: "Magazine 2",
       description: "",
       image: "/mag2img.png",
       mag: "https://heyzine.com/flip-book/d09a374aec.html",
     },
     {
-      title: "Article 4",
+      title: "Magazine 3",
       description: "",
       image: "/mag3img.png",
       mag: "https://heyzine.com/flip-book/1a14246600.html",

@@ -48,7 +48,7 @@ const ExecutiveCommittee = () => {
           <div className="flex justify-center items-center mb-4">
             <Users className="w-10 h-10 text-white mr-3" />
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-              Executive Committee
+              LEADERSHIP TEAM
             </h2>
           </div>
           <p className="text-blue-100 max-w-2xl mx-auto text-lg">

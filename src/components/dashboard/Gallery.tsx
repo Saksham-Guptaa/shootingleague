@@ -30,7 +30,7 @@ const Gallery = () => {
       {/* Title */}
       <div className="mb-6 text-center">
         <h1 className="text-3xl font-bold text-blue-600 md:text-5xl lg:text-6xl">
-          GALLERY
+          HALL OF FAME
         </h1>
       </div>
 
